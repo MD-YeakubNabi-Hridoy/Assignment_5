@@ -46,6 +46,9 @@ tickets.forEach((ticket) => {
       if (seatCount > 4) {
          alert('Sorry you are reach the maximum of ticket buying');
          ticket.checked = false;
+         totalSeats += 1;
+         seatCount -= 1;
+         amount -= 550;
          let seatDetails = document.getElementById('seat-details');
          let removeSeats = seatDetails.lastChild;
          removeSeats.remove();
